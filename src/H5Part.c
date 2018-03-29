@@ -2200,7 +2200,8 @@ _H5Part_iteration_operator (
 
 	if ( data->type != H5G_UNKNOWN )
 	{
-#ifdef H5PART_HAVE_HDF6_18
+// TODO: Send bugfix upstream
+#ifdef H5PART_HAVE_HDF5_18
 		H5O_info_t objinfo;
 
 		hid_t obj_id = H5Oopen(group_id, member_name, H5P_DEFAULT);
